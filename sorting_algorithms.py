@@ -2,7 +2,6 @@ class Sorting():
     
     def __init__(self, a):
         self.a = a
-        self.b = a + [0]
 
     def sorting_alg(self):
         for i in range(len(self.a)-1):
