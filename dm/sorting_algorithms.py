@@ -1,9 +1,7 @@
-
-
 def insert_sort(unsorted):
-	sorted = [] 
-	while unsorted:
-		x = unsorted.pop()
+    sorted = [] 
+    while unsorted:
+        x = unsorted.pop()
 		len_sorted = len(sorted) 
 		for i in range(len_sorted):
 			if sorted[i] <= x:
@@ -12,7 +10,3 @@ def insert_sort(unsorted):
 		if len_sorted == len(sorted):
 			sorted.append(x)
 	return sorted 
-	
-	
-		
-	
