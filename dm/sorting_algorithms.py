@@ -40,8 +40,9 @@ def quick_sort(unsorted):
         return unsorted
     pivot = unsorted.pop(0)
     lower = [] 
-    upper = [] 
-    for x in unsorted:
+    upper = []
+    while unsorted:
+        x = unsorted.pop(0)
         if x <= pivot:
             lower.append(x) 
         else:
