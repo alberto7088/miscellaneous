@@ -34,10 +34,29 @@ def merge_sort(unsorted):
     return sorted 
     
 
+def quick_sort(unsorted):
+    size = len(unsorted) 
+    if size <= 1:
+        return unsorted
+    pivot = unsorted.pop(0)
+    lower = [] 
+    upper = [] 
+    for x in unsorted:
+        if x <= pivot:
+            lower.append(x) 
+        else:
+            upper.append(x)
+    sorted = quick_sort(lower) + [pivot] + quick_sort(upper)  
+    return sorted
+            
+            
+	
+
 if __name__=='__main__':
     x = [4,1,5,3,4,3] 
     print(x) 
     print(insert_sort(x.copy())) 
-    print(merge_sort(x.copy())) 
+    print(merge_sort(x.copy()))
+    print(quick_sort(x.copy())) 
     
 
